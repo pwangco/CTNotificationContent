@@ -12,16 +12,16 @@ static NSString * const kActionKeep = @"Keep";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)configureViewForContent:(UNNotificationContent *)content {
-    NSLog(@"Content Blog: %@", content);
+    NSLog(@"Content BlogPost: %@", content);
+    NSLog(@"Options: %@", self.options);
 }
 
 - (UNNotificationContentExtensionResponseOption)handleAction:(NSString *)action {
     if ([action isEqualToString:kActionRead]) {
-        // do something
+        [[self getParentViewController] openUrl:[NSURL new]];
         return UNNotificationContentExtensionResponseOptionDismiss;
     }
     return UNNotificationContentExtensionResponseOptionDismissAndForwardAction;
