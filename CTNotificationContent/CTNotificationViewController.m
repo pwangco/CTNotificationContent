@@ -4,6 +4,8 @@
 #import <UserNotifications/UserNotifications.h>
 #import <UserNotificationsUI/UserNotificationsUI.h>
 #import "CTContentSliderController.h"
+#import "CTContentBlogController.h"
+#import "CTContentPodcastController.h"
 
 @interface CTNotificationViewController () <UNNotificationContentExtension>
 
@@ -24,6 +26,12 @@
     switch (self.contentType) {
         case CTNotificationContentTypeContentSlider:
             contentController = [[CTContentSliderController alloc] init];
+            break;
+        case CTNotificationContentTypeContentBlogPost:
+            contentController = [[CTContentBlogController alloc] initWithNibName:@"CTContentBlogController" bundle:nil];
+            break;
+        case CTNotificationContentTypeContentPodcast:
+            contentController = [[CTContentPodcastController alloc] initWithNibName:@"CTContentPodcastController" bundle:nil];
             break;
         default:
             break;

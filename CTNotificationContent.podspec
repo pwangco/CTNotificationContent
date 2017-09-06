@@ -9,4 +9,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform = :ios, '10.0'
   s.source_files = 'CTNotificationContent/**/*.{m,h}' 
+  s.resource = 'CTNotificationContent/**/*.{xib}' 
 end
