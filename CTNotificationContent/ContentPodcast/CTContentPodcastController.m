@@ -15,6 +15,7 @@ static NSString * const kActionKeep = @"Keep";
 
 - (void)configureViewForContent:(UNNotificationContent *)content {
     NSLog(@"Content Podcast: %@", content);
+    NSLog(@"Options: %@", self.options);
 }
 
 - (UNNotificationContentExtensionResponseOption)handleAction:(NSString *)action {

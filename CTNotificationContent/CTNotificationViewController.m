@@ -29,9 +29,11 @@
             break;
         case CTNotificationContentTypeContentBlogPost:
             contentController = [[CTContentBlogController alloc] initWithNibName:@"CTContentBlogController" bundle:nil];
+            contentController.options = self.options;
             break;
         case CTNotificationContentTypeContentPodcast:
             contentController = [[CTContentPodcastController alloc] initWithNibName:@"CTContentPodcastController" bundle:nil];
+            contentController.options = self.options;
             break;
         default:
             break;

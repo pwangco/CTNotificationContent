@@ -6,6 +6,8 @@
 
 @interface BaseCTNotificationContentViewController : UIViewController
 
+@property(nonatomic, retain) NSDictionary *options;
+
 - (void)configureViewForContent:(UNNotificationContent *)content; // must override in subclass
 
 - (UNNotificationContentExtensionResponseOption)handleAction:(NSString *)action;  // must override in subclass

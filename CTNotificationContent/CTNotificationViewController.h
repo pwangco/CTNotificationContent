@@ -11,7 +11,8 @@ typedef NS_ENUM(NSInteger, CTNotificationContentType) {
 
 @interface CTNotificationViewController : UIViewController
 
-@property(nonatomic, assign) CTNotificationContentType contentType; // set this in your subclass viewDidLoad before calling super to determine the content view to display
+@property(nonatomic, assign) CTNotificationContentType contentType;
+@property(nonatomic, retain, nullable) NSDictionary *options;
 
 - (void)didReceiveNotification:(UNNotification * _Nonnull)notification;
 
